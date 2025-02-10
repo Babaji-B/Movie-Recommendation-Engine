@@ -83,6 +83,6 @@ Have suggestions or improvements? Feel free to open an issue or submit a pull re
 🔗 Connect with Me
 
 ## Connect with me  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](www.linkedin.com/in/babajimudhiraj/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/babajimudhiraj/)
 
 🚀 Happy Coding!
