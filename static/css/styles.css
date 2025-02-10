@@ -1,0 +1,176 @@
+/* Add this class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Center everything horizontally with some space from the top */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white; /* White text */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.recommendation-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    justify-content: center;
+}
+
+.movie-image {
+    width: 60%; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container without cutting it */
+    border-radius: 5px; /* Rounded corners for a nicer look */
+    margin: 0 auto 10px; /* Center the image horizontally and add space below */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to scale the image and add a shadow */
+.movie-image:hover {
+    transform: scale(1.05); /* Slightly scale up the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
+.recommendation {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    height: 350px;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Fill the height of the container */
+    color: #999;
+    font-size: 1.2em;
+}
+
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal is hidden by default */
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #0c0b0b;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Modal is visible when shown */
+.modal {
+    display: flex;
+}
+
+
+/* Center the movie title */
+.movie-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #000000;
+}
+
+
+.movie-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    overflow: auto; /* Allow scrolling if content exceeds fixed height */
+    max-height: 150px; /* Limit the height of the details section */
+}
+
+.movie-detail span {
+    font-weight: bold;
+}
+
+.star-rating {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.star-rating .star {
+    margin-right: 2px;
+}
+
+.cast-list {
+    /* Remove the max-height and overflow to show cast items normally */
+    max-height: none; /* Remove the height restriction */
+    overflow-y: visible; /* Remove the scroll */
+    text-align: left;
+    border-top: 1px solid #ddd; /* Keep the separator line if you want */
+    margin-top: 5px; /* Space above the list */
+    padding-top: 5px; /* Space inside the top of the list */
+}
+
+.cast-list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.cast-list li {
+    margin-bottom: 5px;
+}
+
+
+button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

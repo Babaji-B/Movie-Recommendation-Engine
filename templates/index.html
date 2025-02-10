@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Link to the external JS file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        
+        <!-- Form for user input -->
+        <div>
+            <label for="movie-name">Movie Name:</label>
+            <select id="movie-name">
+                <option value="" disabled selected>Select a Movie</option>
+            </select>
+
+            <br><br>
+
+            <label for="num-recommendations">Number of Recommendations:</label>
+            <input type="number" id="num-recommendations" min="1">
+            <br><br>
+
+            <button onclick="getRecommendations()">Get Recommendations</button>
+        </div>
+        
+        <!-- Display recommendations here -->
+        <div id="recommendations-container" class="recommendation-container">
+            <!-- Movie recommendations will be dynamically inserted here -->
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="movie-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+</body>
+</html>
